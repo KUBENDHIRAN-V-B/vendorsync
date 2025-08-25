@@ -1,0 +1,39 @@
+{
+  "name": "vendorsync-client",
+  "version": "1.0.0",
+  "description": "VendorSync Frontend - Firebase-powered Next.js Application",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "lint": "next lint --fix",
+    "clean": "rm -rf .next node_modules package-lock.json",
+    "fresh-install": "npm run clean && npm install"
+  },
+  "dependencies": {
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "firebase": "^10.7.1",
+    "next": "^14.2.31",
+    "postcss": "^8.4.38",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.5.2",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.13",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.31"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
