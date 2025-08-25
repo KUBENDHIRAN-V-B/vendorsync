@@ -1,61 +1,113 @@
-# VendorSync - Live Deployment Guide
+# VendorSync
 
-## 🚀 Quick Deploy to Vercel
+VendorSync is a comprehensive web application built with Next.js that facilitates seamless interactions between vendors, wholesalers, and customers. The platform streamlines product management, order processing, and user authentication with real-time capabilities.
 
-### 1. Environment Variables Setup
-Set these in Vercel dashboard:
+## 🌟 Key Features
 
-```bash
-NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyDgnT6Ijyj3dOsSlDHLB_4c0HRUDzWxjUI
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=vendorsync-870ae.firebaseapp.com
-NEXT_PUBLIC_FIREBASE_DATABASE_URL=https://vendorsync-870ae-default-rtdb.firebaseio.com
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=vendorsync-870ae
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=vendorsync-870ae.firebasestorage.app
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=465255780285
-NEXT_PUBLIC_FIREBASE_APP_ID=1:465255780285:web:4e6cfe1af7de21fb068cd4
-NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=G-YK6WJMNBRB
-```
+- **Multi-User System**
+  - Role-based authentication (Vendors, Wholesalers, Customers)
+  - Secure Firebase authentication
+  - Personalized dashboards for each user type
 
-### 2. Deploy Commands
-```bash
-# Install dependencies
-npm install
+- **Product Management**
+  - Real-time inventory updates
+  - Product catalog with images
+  - Wholesale pricing system
+  - Category management
 
-# Build for production
-npm run build
+- **Order Processing**
+  - Shopping cart with local storage backup
+  - Wholesale order management
+  - Minimum order quantity handling
+  - Real-time order tracking
 
-# Start production server
-npm start
-```
+- **Technology Stack**
+  - Next.js for frontend
+  - Firebase for backend services
+  - Tailwind CSS for styling
+  - TypeScript for type safety
 
-### 3. Firebase Security Rules
-Update Firestore rules for production:
+## 🌐 Live Demo
 
-```javascript
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /{document=**} {
-      allow read, write: if true;
-    }
-  }
-}
-```
+Visit our live demo at (https://vendorsync-umber.vercel.app/)
 
-### 4. Live Demo URLs
-- **Homepage**: https://vendorsync.vercel.app
-- **Demo**: https://vendorsync.vercel.app/demo
-- **Vendor Login**: https://vendorsync.vercel.app/vendor-login
-- **Wholesaler Login**: https://vendorsync.vercel.app/wholesaler-login
-- **Customer Login**: https://vendorsync.vercel.app/customer-login
+## 💻 Local Development Setup
 
-## ✅ Production Ready Features
-- Firebase integration with real-time data
-- Responsive design for all devices
-- Role-based authentication
-- Complete order management system
-- Wholesale ordering with minimum limits
-- Local storage fallback for demo reliability
-- Error handling and loading states
-- SEO optimized
-- Performance optimized build
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/KUBENDHIRAN-V-B/vendorsync.git
+   cd vendorsync
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables**
+   Create a `.env.local` file in the root directory and add your Firebase configuration:
+   ```bash
+   NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+   NEXT_PUBLIC_FIREBASE_DATABASE_URL=your_database_url
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+   NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+   NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=your_measurement_id
+   ```
+
+4. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open Browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## ✅ Production Features & Capabilities
+
+- **Real-time Data Integration**
+  - Firebase Realtime Database integration
+  - Real-time updates across all clients
+  - Automatic data synchronization
+
+- **Responsive Design**
+  - Mobile-first approach
+  - Tailwind CSS responsive classes
+  - Cross-browser compatibility
+
+- **Security & Authentication**
+  - Role-based access control
+  - Secure Firebase authentication
+  - Protected API routes
+
+- **Order Management**
+  - Complete order lifecycle tracking
+  - Wholesale order minimum limits
+  - Order history and analytics
+
+- **Reliability & Performance**
+  - Local storage fallback for demo
+  - Error boundary implementation
+  - Loading state management
+  - SEO optimization
+  - Performance-optimized build
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License.
+
+## 📞 Contact
+
+Kubendhiran V B - [GitHub Profile](https://github.com/KUBENDHIRAN-V-B)
+
+Project Link: [https://github.com/KUBENDHIRAN-V-B/vendorsync](https://github.com/KUBENDHIRAN-V-B/vendorsync)
